@@ -16,7 +16,7 @@ export default function Footer() {
         <section className="py-16 bg-primary">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="text-white mt-8 flex flex-col justify-between gap-4 text-sm font-medium md:flex-row md:items-center md:text-left">
-                    <div className="flex items-center gap-2 lg:justify-start">
+                    <div className="flex items-center gap-2 justify-start">
                         <img src={"/logo.svg"} alt="Logo de CoFound" className="max-h-12" />
                         <h2 className="text-lg font-semibold text-white">CoFound</h2>
                     </div>
