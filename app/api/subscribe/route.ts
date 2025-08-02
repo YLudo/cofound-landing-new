@@ -1,5 +1,7 @@
-import { kv } from '@vercel/kv';
+import { createClient } from 'redis';
 import { NextResponse } from "next/server";
+
+const redis = await createClient().connect();
 
 export async function POST(request: Request) {
     try {
@@ -12,7 +14,7 @@ export async function POST(request: Request) {
             );
         }
 
-        await kv.sadd('newsletter_emails', email);
+        await redis.sadd('newsletter_emails', email);
 
         return NextResponse.json(
             { message: "Email added successfully"},
