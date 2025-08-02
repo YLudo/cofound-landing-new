@@ -13,7 +13,7 @@ export default function Navbar() {
                         </Link>
                     </div>
                     <div className="flex gap-2">
-                        <Newsletter />
+                        <Newsletter title="Rejoindre CoFound" />
                     </div>
                 </nav>
             </div>

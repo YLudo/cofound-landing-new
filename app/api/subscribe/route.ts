@@ -1,7 +1,7 @@
-import { createClient } from 'redis';
+import { Redis } from '@upstash/redis';
 import { NextResponse } from "next/server";
 
-const redis = await createClient().connect();
+const redis = Redis.fromEnv();
 
 export async function POST(request: Request) {
     try {

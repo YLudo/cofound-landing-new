@@ -16,7 +16,7 @@ const formSchema = z.object({
     }),
 });
 
-export default function Newsletter() {
+export default function Newsletter({ title }: { title: string }) {
     const [open, setOpen] = useState<boolean>(false);
 
     const form = useForm<z.infer<typeof formSchema>>({
@@ -58,7 +58,7 @@ export default function Newsletter() {
                     variant="secondary" 
                     className="cursor-pointer hover:bg-[#FF00E2] hover:text-white"
                 >
-                    Rejoindre CoFound
+                    {title}
                 </Button>
             </DialogTrigger>
             <DialogContent>

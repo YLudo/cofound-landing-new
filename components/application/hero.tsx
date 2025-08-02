@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
+import Newsletter from "./newsletter";
 
 export default function Hero() {
     return (
@@ -19,9 +19,7 @@ export default function Hero() {
                             La plateforme intelligente qui connecte porteurs d'idées, talents et mentors pour lancer les projets qui vous tiennent à cœur.
                         </p>
                         <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-                            <Button className="w-full sm:w-auto cursor-pointer hover:bg-[#FF00E2] hover:text-white" variant="secondary">
-                                Rejoignez-nous !
-                            </Button>
+                            <Newsletter title="Rejoignez-nous !" />
                         </div>
                     </div>
                     <img
