@@ -7,8 +7,8 @@ const socialLinks = [
 ]
 
 const legalLinks = [
-    { name: "Politique de confidentialité", href: "#" },
-    { name: "Mentions légales", href: "#" },
+    { name: "Politique de confidentialité", href: "/politique-confidentialite" },
+    { name: "Mentions légales", href: "/mentions-legales" },
 ];
 
 export default function Footer() {
