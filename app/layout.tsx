@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
 
 const fontSans = FontSans({
     variable: "--font-sans",
     subsets: ["latin"],
 });
 
-const siteUrl = "https://www.cofound-app.com/"
+const siteUrl = "https://cofounds.app/"
 
 export const metadata: Metadata = {
     title: "CoFound",
@@ -46,6 +45,27 @@ export const metadata: Metadata = {
             'max-image-preview': 'large',
             'max-snippet': -1,
         }
+    },
+    authors: [{ name: 'CoFound Team' }],
+    creator: 'CoFound',
+    publisher: 'CoFound',
+    keywords: ['cofondateurs', 'startup', 'entrepreneurs', 'matching', 'projet', 'équipe', 'étudiants'],
+    applicationName: 'CoFound',
+};
+
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'CoFound',
+    description: 'La plateforme qui connecte porteurs de projets, développeurs, designers et autres.',
+    url: 'https://cofounds.app/',
+    publisher: {
+        '@type': 'Organization',
+        name: 'CoFound',
+        logo: {
+            '@type': 'ImageObject',
+            url: 'https://cofounds.app/logo.png'
+        }
     }
 };
 
@@ -59,8 +79,13 @@ export default function RootLayout({
             <body
                 className={`${fontSans.variable} antialiased`}
             >
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+                    }}
+                />
                 {children}
-                <Toaster />
             </body>
         </html>
     );

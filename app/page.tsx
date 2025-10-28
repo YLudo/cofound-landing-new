@@ -1,20 +1,20 @@
-import CTA from "@/components/application/cta";
-import FAQ from "@/components/application/faq";
+import CallToAction from "@/components/application/call-to-action";
+import FAQs from "@/components/application/faqs";
+import Features from "@/components/application/features";
 import Footer from "@/components/application/footer";
-import Functionnalities from "@/components/application/functionnalities";
 import Hero from "@/components/application/hero";
 import HowItWorks from "@/components/application/how-it-works";
-import Navbar from "@/components/application/navbar";
 
 export default function HomePage() {
     return (
         <>
-            <Navbar />
             <Hero />
-            <HowItWorks />
-            <Functionnalities />
-            <CTA />
-            <FAQ />
+            <section className="flex flex-col gap-24 md:gap-48 py-16 md:py-32">
+                <Features />
+                <HowItWorks />
+                <CallToAction />
+                <FAQs />
+            </section>
             <Footer />
         </>
     );
