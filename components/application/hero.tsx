@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../u
 
 export default function Hero() {
     return (
-        <section className="min-h-screen gap-24 py-8 bg-primary flex flex-col justify-between">
+        <section className="min-h-screen py-8 bg-primary flex flex-col justify-between">
             <div className="container mx-auto px-4 md:px-8">
                 <nav className="hidden md:flex items-center justify-between">
                     <div className="flex items-center gap-6">
