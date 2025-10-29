@@ -11,7 +11,7 @@ export default function Hero() {
                 <nav className="hidden md:flex items-center justify-between">
                     <div className="flex items-center gap-6">
                         <Link href="/" className="flex items-center gap-2 text-white">
-                            <img src={"/logo_icon.svg"} alt="Logo de CoFound" className="max-h-12 shrink-0" />
+                            <img src={"/logo_icon.svg"} alt="Logo de CoFound" className="max-h-12" />
                             <span className="text-lg font-semibold tracking-tighter">CoFound</span>
                         </Link>
                     </div>
@@ -32,7 +32,7 @@ export default function Hero() {
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-6">
                             <Link href="/" className="flex items-center gap-2 text-white">
-                                <img src={"/logo_icon.svg"} alt="Logo de CoFound" className="max-h-12 shrink-0" />
+                                <img src={"/logo_icon.svg"} alt="Logo de CoFound" className="max-h-12" />
                                 <span className="text-lg font-semibold tracking-tighter">CoFound</span>
                             </Link>
                         </div>
@@ -44,11 +44,9 @@ export default function Hero() {
                             </SheetTrigger>
                             <SheetContent className="bg-primary border-primary overflow-y-auto">
                                 <SheetHeader>
-                                    <SheetTitle>
-                                        <Link href="/" className="flex items-center gap-2 text-white">
-                                            <img src={"/logo_icon.svg"} alt="Logo de CoFound" className="max-h-8 shrink-0" />
-                                            <span className="text-lg font-semibold tracking-tighter">CoFound</span>
-                                        </Link>
+                                    <SheetTitle className="flex items-center gap-2 text-white">
+                                        <img src={"/logo_icon.svg"} alt="Logo de CoFound" className="max-h-8" />
+                                        <span className="text-lg font-semibold tracking-tighter">CoFound</span>
                                     </SheetTitle>
                                 </SheetHeader>
                                 <div className="flex flex-col gap-6 p-4">
