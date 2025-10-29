@@ -44,9 +44,10 @@ export default function Hero() {
                             </SheetTrigger>
                             <SheetContent className="bg-primary border-primary overflow-y-auto">
                                 <SheetHeader>
-                                    <SheetTitle className="flex items-center gap-2 text-white">
-                                        <img src={"/logo_icon.svg"} alt="Logo de CoFound" className="max-h-8" />
-                                        <span className="text-lg font-semibold tracking-tighter">CoFound</span>
+                                    <SheetTitle>
+                                        <Link href="/" className="flex items-center gap-2">
+                                            <img src={"/logo_icon.svg"} alt="Logo de CoFound" className="max-h-8" />
+                                        </Link>
                                     </SheetTitle>
                                 </SheetHeader>
                                 <div className="flex flex-col gap-6 p-4">
