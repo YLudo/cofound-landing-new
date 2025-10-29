@@ -51,6 +51,9 @@ export const metadata: Metadata = {
     publisher: 'CoFound',
     keywords: ['cofondateurs', 'startup', 'entrepreneurs', 'matching', 'projet', 'équipe', 'étudiants'],
     applicationName: 'CoFound',
+    verification: {
+        google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION
+    }
 };
 
 const jsonLd = {
