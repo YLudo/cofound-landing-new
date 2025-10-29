@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../u
 
 export default function Hero() {
     return (
-        <section className="min-h-screen py-8 bg-primary flex flex-col justify-between">
+        <section className="min-h-screen py-4 bg-primary flex flex-col justify-between">
             <div className="container mx-auto px-4 md:px-8">
                 <nav className="hidden md:flex items-center justify-between">
                     <div className="flex items-center gap-6">
@@ -112,6 +112,13 @@ export default function Hero() {
                             src={"/le_starter.png"}
                             alt="Logo de Le Starter"
                             className="max-h-8"
+                        />
+                    </a>
+                    <a href="https://lamelee.com/" target="_blank">
+                        <img
+                            src={"/la_melee.png"}
+                            alt="Logo de La Melee"
+                            className="max-h-16"
                         />
                     </a>
                 </div>
