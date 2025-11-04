@@ -49,7 +49,10 @@ export const metadata: Metadata = {
     authors: [{ name: 'CoFound Team' }],
     creator: 'CoFound',
     publisher: 'CoFound',
-    keywords: ['cofondateurs', 'startup', 'entrepreneurs', 'matching', 'projet', 'équipe', 'étudiants'],
+    keywords: [
+        "cofondateurs","trouver associé","startup","matching IA",
+        "équipe projet","étudiants","incubation","idée startup"
+    ],
     applicationName: 'CoFound',
     verification: {
         google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION
