@@ -10,10 +10,10 @@ const fontSans = FontSans({
 const siteUrl = "https://cofounds.app/"
 
 export const metadata: Metadata = {
-    title: "CoFound",
+    title: "CoFound — Trouvez vos associés et lancez votre projet",
     description: "La plateforme qui connecte porteurs de projets, développeurs, designers et autres. Trouvez vos co-fondateurs grâce à notre matching IA et donnez vie à vos idées de startup.",
     openGraph: {
-        title: "CoFound : Trouvez vos associés et lancez votre projet",
+        title: "CoFound — Trouvez vos associés et lancez votre projet",
         description: "La plateforme pour transformer vos idées en startups à succès.",
         url: siteUrl,
         siteName: "CoFound",
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
     alternates: {
         canonical: "/",
+        languages: { "fr-FR": "/" }
     },
     robots: {
         index: true,
