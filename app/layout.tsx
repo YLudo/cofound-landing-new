@@ -7,34 +7,42 @@ const fontSans = FontSans({
     subsets: ["latin"],
 });
 
-const siteUrl = "https://cofounds.app/"
+const siteUrl = "https://cofounds.app";
 
 export const metadata: Metadata = {
-    title: "CoFound — Trouvez vos associés et lancez votre projet",
-    description: "La plateforme qui connecte porteurs de projets, développeurs, designers et autres. Trouvez vos co-fondateurs grâce à notre matching IA et donnez vie à vos idées de startup.",
+    title: {
+        default: "CoFound — Trouvez vos associés et lancez votre projet",
+        template: "%s | CoFound",
+    },
+    description:
+        "CoFound connecte les étudiants et jeunes entrepreneurs qui partagent vos valeurs et vos ambitions. Créez votre équipe, validez vos idées et lancez votre projet dans un cadre de confiance.",
     openGraph: {
         title: "CoFound — Trouvez vos associés et lancez votre projet",
-        description: "La plateforme pour transformer vos idées en startups à succès.",
+        description:
+            "La plateforme qui connecte porteurs de projets, développeurs, designers et autres. Trouvez vos co-fondateurs grâce à notre matching IA et donnez vie à vos idées de startup.",
         url: siteUrl,
         siteName: "CoFound",
         images: [
             {
-                url: `${siteUrl}/logo.png`, 
+                url: `${siteUrl}/logo.png`,
                 width: 1200,
                 height: 630,
                 alt: "Illustration de la plateforme CoFound",
             },
         ],
         locale: "fr_FR",
-        type: "website"
+        type: "website",
     },
     icons: {
-        icon: "/favico.ico",
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
     },
     metadataBase: new URL(siteUrl),
     alternates: {
         canonical: "/",
-        languages: { "fr-FR": "/" }
+        languages: {
+            "fr-FR": "/",
+        },
     },
     robots: {
         index: true,
@@ -42,38 +50,60 @@ export const metadata: Metadata = {
         googleBot: {
             index: true,
             follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-        }
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
-    authors: [{ name: 'CoFound Team' }],
-    creator: 'CoFound',
-    publisher: 'CoFound',
+    authors: [{ name: "CoFound Team" }],
+    creator: "CoFound",
+    publisher: "CoFound",
     keywords: [
-        "cofondateurs","trouver associé","startup","matching IA",
-        "équipe projet","étudiants","incubation","idée startup"
+        "cofondateurs",
+        "trouver associé",
+        "startup",
+        "matching IA",
+        "équipe projet",
+        "étudiants",
+        "incubation",
+        "idée startup",
+        "entrepreneuriat étudiant",
+        "cofounders",
+        "création de startup",
     ],
-    applicationName: 'CoFound',
+    applicationName: "CoFound",
     verification: {
-        google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION
-    }
+        google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    },
 };
 
 const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'CoFound',
-    description: 'La plateforme qui connecte porteurs de projets, développeurs, designers et autres.',
-    url: 'https://cofounds.app/',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "CoFound",
+    description:
+        "La plateforme qui connecte porteurs de projets, développeurs, designers et autres.",
+    url: siteUrl,
     publisher: {
-        '@type': 'Organization',
-        name: 'CoFound',
+        "@type": "Organization",
+        name: "CoFound",
         logo: {
-            '@type': 'ImageObject',
-            url: 'https://cofounds.app/logo.png'
-        }
-    }
+            "@type": "ImageObject",
+            url: `${siteUrl}/logo.png`,
+        },
+    },
+};
+
+const organizationLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "CoFound",
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
+    sameAs: [
+        "https://www.linkedin.com/company/cofound-app/",
+        "https://www.instagram.com/cofounds.app",
+    ],
 };
 
 export default function RootLayout({
@@ -83,13 +113,17 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
-            <body
-                className={`${fontSans.variable} antialiased`}
-            >
+            <body className={`${fontSans.variable} antialiased`}>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+                        __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+                    }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(organizationLd).replace(/</g, "\\u003c"),
                     }}
                 />
                 {children}
