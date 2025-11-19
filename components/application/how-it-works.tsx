@@ -26,11 +26,11 @@ export default function HowItWorks() {
 
     return (
         <div className="container mx-auto lg:max-w-6xl space-y-8 px-6 md:space-y-16 lg:space-y-20">
-            <div className="relative z-10 mx-auto max-w-5xl space-y-6 text-center">
-                <h2 className="text-balance text-4xl font-semibold tracking-tight xl:text-5xl">
+            <div className="relative z-10 mx-auto max-w-5xl space-y-4 text-center">
+                <h2 className="text-balance font-bold text-4xl xl:text-5xl">
                     Comment fonctionne CoFound ?
                 </h2>
-                <p className="text-pretty text-lg text-muted-foreground">
+                <p className="text-balance text-muted-foreground">
                     CoFound t’aide à trouver les bons cofondateurs, valider ton idée et transformer ton projet en startup.
                     En trois étapes simples, tu rejoins une communauté d’entrepreneurs ambitieux.
                 </p>

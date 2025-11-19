@@ -4,6 +4,7 @@ import Features from "@/components/application/features";
 import Footer from "@/components/application/footer";
 import Hero from "@/components/application/hero";
 import HowItWorks from "@/components/application/how-it-works";
+import Team from "@/components/application/team";
 
 export default function HomePage() {
     return (
@@ -14,6 +15,7 @@ export default function HomePage() {
                 <HowItWorks />
                 <CallToAction />
                 <FAQs />
+                <Team />
             </section>
             <Footer />
         </>
