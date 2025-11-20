@@ -19,9 +19,9 @@ const components = {
 };
 
 type Props = {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 };
 
 export async function generateStaticParams() {
@@ -33,7 +33,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     try {
-        const post = getPostBySlug(params.slug);
+        const { slug } = await params;
+        const post = getPostBySlug(slug);
         if (!post) return {};
 
         const ogImage = post.image 
@@ -76,10 +77,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
-export default function PostPage({ params }: Props) {
+export default async function PostPage({ params }: Props) {
+    const { slug } = await params;
+
     let post;
     try {
-        post = getPostBySlug(params.slug);
+        post = getPostBySlug(slug);
     } catch (error) {
         notFound();
     }
@@ -117,7 +120,7 @@ export default function PostPage({ params }: Props) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            
+
             <NewsHero post={post} />
             <article className="container mx-auto px-4 md:px-8 py-16">
                 <div className="prose prose-slate dark:prose-invert max-w-none">
