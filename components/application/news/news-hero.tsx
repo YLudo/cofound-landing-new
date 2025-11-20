@@ -89,7 +89,7 @@ export default function NewsHero({ post }: NewsHeroProps) {
                         </p>
                         <div className="flex w-full flex-wrap gap-2">
                             {post.tags && post.tags.map((tag) => (
-                                <Badge variant="secondary">{tag}</Badge>
+                                <Badge key={tag} variant="secondary">{tag}</Badge>
                             ))}
                         </div>
                     </div>
